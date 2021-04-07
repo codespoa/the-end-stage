@@ -87,9 +87,9 @@ describe('SignUp Controller', () => {
     )
   })
 
-  test('should return 400 if an invalid email is provider', () => {
+  test('should call EmailValidator with valid email', () => {
     const { sut, emailValidatorStub } = makeSut()
-    jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
+    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
     const httpRequest = {
       body: {
         name: 'any_name',
@@ -98,9 +98,8 @@ describe('SignUp Controller', () => {
         passwordConfirmation: 'any_password_confirmation',
       },
     }
-    const httpResponse = sut.handle(httpRequest)
+    sut.handle(httpRequest)
 
-    expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new InvalidParamError('email'))
+    expect(isValidSpy).toHaveBeenCalledWith('invalid_mail@mail.com')
   })
 })
