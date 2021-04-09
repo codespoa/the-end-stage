@@ -12,7 +12,8 @@
     "strictPropertyInitialization": false,
     "baseUrl": "./src",
     "paths": {
-      "@presentation/*": ["presentation/*"]
+      "@presentation/*": ["presentation/*"],
+      "@domain/*": ["domain/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
