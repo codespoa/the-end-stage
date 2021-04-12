@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "clear && jest --passWithNoTests",
-    "test:staged": "jest --passWithNoTests"
+    "test": "clear && jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "clear && jest --passWithNoTests --runInBand",
+    "test:unit": "yarn test -- -c jest.unit.config.ts",
+    "test:integration": "yarn test -- -c jest.integration.config.ts",
+    "test:staged": "yarn test -- --findRelatedTests",
+    "test:ci": "yarn test -- --coverage"
   },
   "keywords": [],
-  "author": "Eduardo Alves",
+  "author": "Eduardo Alves <caaduh4@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.20",
