@@ -13,7 +13,8 @@
     "baseUrl": "./src",
     "paths": {
       "@presentation/*": ["presentation/*"],
-      "@domain/*": ["domain/*"]
+      "@domain/*": ["domain/*"],
+      "@utils/*": ["utils/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
