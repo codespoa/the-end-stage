@@ -14,7 +14,8 @@
     "paths": {
       "@presentation/*": ["presentation/*"],
       "@domain/*": ["domain/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
