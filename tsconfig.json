@@ -16,7 +16,8 @@
       "@presentation/*": ["presentation/*"],
       "@domain/*": ["domain/*"],
       "@utils/*": ["utils/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@main/*": ["main/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
