@@ -2,7 +2,6 @@ import { AddAccountRepository } from '@data/protocols/add-account-repository'
 import { AddAccountModel } from '@domain/usecases/add-account'
 import { AccountModel } from '@domain/models/account'
 import { MongoHelper } from '@infra/db/mongodb/helpers/mongo-helper'
-import { resourceLimits } from 'node:worker_threads'
 
 export class AccountMongoRepository implements AddAccountRepository {
   async add(accountData: AddAccountModel): Promise<AccountModel> {
