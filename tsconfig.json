@@ -12,11 +12,11 @@
     "strictPropertyInitialization": false,
     "baseUrl": "./src",
     "paths": {
+      "@infra/*": ["infra/*"],
       "@presentation/*": ["presentation/*"],
       "@domain/*": ["domain/*"],
       "@utils/*": ["utils/*"],
-      "@data/*": ["data/*"],
-      "@infra/*": ["infra/*"]
+      "@data/*": ["data/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
