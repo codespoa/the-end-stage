@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sucrase-node src/main/server.ts",
+    "start": "sucrase-node ./src/main/server.ts | pino-pretty -c",
+    "docker:up": "docker-compose up -d --build db && docker-compose up --build app",
     "test": "clear && jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "clear && jest --passWithNoTests --runInBand",
     "test:unit": "yarn test -- -c jest.unit.config.js",
@@ -41,13 +42,16 @@
     "ts-jest": "^26.5.1",
     "ts-node-dev": "^1.1.1",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "@types/pino": "^6.3.7",
+    "pino-pretty": "^4.7.1"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "fast-glob": "^3.2.5",
     "mongodb": "^3.6.6",
+    "pino": "^6.11.2",
     "validator": "^13.5.2"
   }
 }
