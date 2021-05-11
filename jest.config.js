@@ -3,7 +3,7 @@ const { compilerOptions } = require('./tsconfig.json')
 
 module.exports = {
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts', '!<rootDir>/src/main/**'],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   coverageReporters: ['text-summary', 'lcov'],
